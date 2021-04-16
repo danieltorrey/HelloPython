@@ -1,5 +1,5 @@
 import logging
-from lib.utils import debugutils
+from lib.utils import debug_utils
 
 log = logging.getLogger(__name__)
 
@@ -10,7 +10,7 @@ ch.setLevel(logging.DEBUG)
 fmt = logging.Formatter('%(asctime)-15s %(name)-10s %(levelname)-8s :%(message)s')
 ch.setFormatter(fmt)
 log.addHandler(ch)
-log.debug('{0} {1}:{2}'.format('hello, world from ', __name__, debugutils.get_linenumber()))
+log.debug('{0} {1}:{2}'.format('hello, world from ', __name__, debug_utils.get_linenumber()))
 
 
 class ScrewdriverBase:

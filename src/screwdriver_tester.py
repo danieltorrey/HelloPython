@@ -1,7 +1,7 @@
 import logging
 from lib.tools.screwdrivers.screwdrivers import FlatheadScrewdriver, PhillipsScrewdriver, TorxScrewdriver
 #from lib.utils import debugutils
-import lib.utils.debugutils as debugutils
+import lib.utils.debug_utils as debug_utils
 
 log = logging.getLogger(__name__)
 log.setLevel(logging.DEBUG)
@@ -12,18 +12,18 @@ fmt = logging.Formatter('%(asctime)-15s %(name)-10s %(levelname)-8s :%(message)s
 ch.setFormatter(fmt)
 log.addHandler(ch)
 
-log.debug('{0} {1}:{2}'.format('hello, world from ', __name__, debugutils.get_linenumber()))
+log.debug('{0} {1}:{2}'.format('hello, world from ', __name__, debug_utils.get_linenumber()))
 
 screwdriver = FlatheadScrewdriver()
-log.debug('{0} {1}:{2}, I am a {3} screwdriver'.format('hello, world from ', __name__, debugutils.get_linenumber(),
+log.debug('{0} {1}:{2}, I am a {3} screwdriver'.format('hello, world from ', __name__, debug_utils.get_linenumber(),
                                                        screwdriver.screwdrivertype))
 
 screwdriver = PhillipsScrewdriver()
-log.debug('{0} {1}:{2}, I am a {3} screwdriver'.format('hello, world from ', __name__, debugutils.get_linenumber(),
+log.debug('{0} {1}:{2}, I am a {3} screwdriver'.format('hello, world from ', __name__, debug_utils.get_linenumber(),
                                                        screwdriver.screwdrivertype))
 
 screwdriver = TorxScrewdriver()
-log.debug('{0} {1}:{2}, I am a {3} screwdriver'.format('hello, world from ', __name__, debugutils.get_linenumber(),
+log.debug('{0} {1}:{2}, I am a {3} screwdriver'.format('hello, world from ', __name__, debug_utils.get_linenumber(),
                                                        screwdriver.screwdrivertype))
 
 the_set = set()
