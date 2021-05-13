@@ -7,5 +7,3 @@ __pycache__
 # Ignore Gradle build output directory
 build
 
-# Ignore macos turds
-.DS_Store
